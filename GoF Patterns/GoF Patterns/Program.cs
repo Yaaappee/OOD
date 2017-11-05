@@ -6,7 +6,7 @@ namespace GoF_Patterns
 {
     public static class Program
     {
-        private const Patterns Pattern = Patterns.FactoryMethod;
+        private const Patterns Pattern = Patterns.CreationalFactoryMethod;
         private const ExampleType Type = ExampleType.Structural;
 
         static void Main(string[] args)
@@ -17,7 +17,7 @@ namespace GoF_Patterns
             Console.WriteLine();
             switch (Pattern)
             {
-                case Patterns.AbstractFactory:
+                case Patterns.CreationalAbstractFactory:
                     if (Type == ExampleType.Structural)
                     {
                         AbstractFactory.Client.RunStructural(new ConcreteFactory1());
@@ -25,21 +25,21 @@ namespace GoF_Patterns
                     }
                     else
                     {
-                        // TODO: AbstractFactory Real-world example
+                        // TODO: CreationalAbstractFactory Real-world example
                         /*
                         Lion eats Wildebeest
                         Wolf eats Bison    
                         */
                     }
                     break;
-                case Patterns.FactoryMethod:
+                case Patterns.CreationalFactoryMethod:
                     if (Type == ExampleType.Structural)
                     {
                         Client.Run();
                     }
                     else
                     {
-                        // TODO: FactoryMethod Real-world example
+                        // TODO: CreationalFactoryMethod Real-world example
                         /*
                         Resume -------
                             SkillsPage
@@ -55,47 +55,47 @@ namespace GoF_Patterns
                         */
                     }
                     break;
-                case Patterns.Facade:
+                case Patterns.StructuralFacade:
                     break;
-                case Patterns.Observer:
+                case Patterns.BehavioralObserver:
                     break;
-                case Patterns.Iterator:
+                case Patterns.BehavioralIterator:
                     break;
-                case Patterns.Strategy:
+                case Patterns.BehavioralStrategy:
                     break;
-                case Patterns.Proxy:
+                case Patterns.StructuralProxy:
                     break;
-                case Patterns.Composite:
+                case Patterns.StructuralComposite:
                     break;
-                case Patterns.Singleton:
+                case Patterns.CreationalSingleton:
                     break;
-                case Patterns.Adapter:
+                case Patterns.StructuralAdapter:
                     break;
-                case Patterns.Command:
+                case Patterns.BehavioralCommand:
                     break;
-                case Patterns.State:
+                case Patterns.BehavioralState:
                     break;
-                case Patterns.TemplateMethod:
+                case Patterns.BehavioralTemplateMethod:
                     break;
-                case Patterns.Prototype:
+                case Patterns.CreationalPrototype:
                     break;
-                case Patterns.Bridge:
+                case Patterns.StructuralBridge:
                     break;
-                case Patterns.Decorator:
+                case Patterns.StructuralDecorator:
                     break;
-                case Patterns.Builder:
+                case Patterns.CreationalBuilder:
                     break;
-                case Patterns.ChainOfResponsibility:
+                case Patterns.BehavioralChainOfResponsibility:
                     break;
-                case Patterns.Mediator:
+                case Patterns.BehavioralMediator:
                     break;
-                case Patterns.Flyweight:
+                case Patterns.StructuralFlyweight:
                     break;
-                case Patterns.Interpreter:
+                case Patterns.BehavioralInterpreter:
                     break;
-                case Patterns.Memento:
+                case Patterns.BehavioralMemento:
                     break;
-                case Patterns.Visitor:
+                case Patterns.BehavioralVisitor:
                     break;
                 default:
                     break;
