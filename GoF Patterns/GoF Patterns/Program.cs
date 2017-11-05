@@ -1,15 +1,20 @@
 ﻿using System;
 using GoF_Patterns.AbstractFactory.Structural;
+using GoF_Patterns.FactoryMethod.Structural;
 
 namespace GoF_Patterns
 {
     public static class Program
     {
-        private const Patterns Pattern = Patterns.AbstractFactory;
+        private const Patterns Pattern = Patterns.FactoryMethod;
         private const ExampleType Type = ExampleType.Structural;
 
         static void Main(string[] args)
         {
+            Console.WriteLine(new string('=', 42 + Pattern.ToString().Length));
+            Console.WriteLine(new string('=', 20) + " " + Pattern + " " + new string('=', 20));
+            Console.WriteLine(new string('=', 42 + Pattern.ToString().Length));
+            Console.WriteLine();
             switch (Pattern)
             {
                 case Patterns.AbstractFactory:
@@ -21,9 +26,34 @@ namespace GoF_Patterns
                     else
                     {
                         // TODO: AbstractFactory Real-world example
+                        /*
+                        Lion eats Wildebeest
+                        Wolf eats Bison    
+                        */
                     }
                     break;
                 case Patterns.FactoryMethod:
+                    if (Type == ExampleType.Structural)
+                    {
+                        Client.Run();
+                    }
+                    else
+                    {
+                        // TODO: FactoryMethod Real-world example
+                        /*
+                        Resume -------
+                            SkillsPage
+                            EducationPage
+                            ExperiencePage
+
+                        Report -------
+                            IntroductionPage
+                            ResultsPage
+                            ConclusionPage
+                            SummaryPage
+                            BibliographyPage
+                        */
+                    }
                     break;
                 case Patterns.Facade:
                     break;
