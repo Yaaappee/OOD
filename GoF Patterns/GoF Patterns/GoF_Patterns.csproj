@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Folder Include="AbstractFactory\RealWorld\" />
+    <Folder Include="Facade\RealWorld\" />
     <Folder Include="FactoryMethod\RealWorld\" />
   </ItemGroup>
 
