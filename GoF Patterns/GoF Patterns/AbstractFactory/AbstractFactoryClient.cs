@@ -1,6 +1,6 @@
 ﻿namespace GoF_Patterns.AbstractFactory
 {
-    public static class Client
+    public static class AbstractFactoryClient
     {
         public static void RunStructural(Structural.AbstractFactory factory)
         {

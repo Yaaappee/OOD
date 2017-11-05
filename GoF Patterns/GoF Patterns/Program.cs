@@ -1,27 +1,29 @@
 ﻿using System;
+using GoF_Patterns.AbstractFactory;
 using GoF_Patterns.AbstractFactory.Structural;
-using GoF_Patterns.FactoryMethod.Structural;
+using GoF_Patterns.FactoryMethod;
 
 namespace GoF_Patterns
 {
     public static class Program
     {
-        private const Patterns Pattern = Patterns.CreationalFactoryMethod;
-        private const ExampleType Type = ExampleType.Structural;
-
         static void Main(string[] args)
         {
-            Console.WriteLine(new string('=', 42 + Pattern.ToString().Length));
-            Console.WriteLine(new string('=', 20) + " " + Pattern + " " + new string('=', 20));
-            Console.WriteLine(new string('=', 42 + Pattern.ToString().Length));
+            Patterns pattern = Patterns.CreationalFactoryMethod;
+            ExampleType type = ExampleType.Structural;
+
+            Console.WriteLine(new string('=', 42 + pattern.ToString().Length));
+            Console.WriteLine(new string('=', 20) + " " + pattern + " " + new string('=', 20));
+            Console.WriteLine(new string('=', 42 + pattern.ToString().Length));
             Console.WriteLine();
-            switch (Pattern)
+            switch (pattern)
             {
+                // Creates an instance of several families of classes
                 case Patterns.CreationalAbstractFactory:
-                    if (Type == ExampleType.Structural)
+                    if (type == ExampleType.Structural)
                     {
-                        AbstractFactory.Client.RunStructural(new ConcreteFactory1());
-                        AbstractFactory.Client.RunStructural(new ConcreteFactory2());
+                        AbstractFactoryClient.RunStructural(new ConcreteFactory1());
+                        AbstractFactoryClient.RunStructural(new ConcreteFactory2());
                     }
                     else
                     {
@@ -32,10 +34,11 @@ namespace GoF_Patterns
                         */
                     }
                     break;
+                // Creates an instance of several derived classes
                 case Patterns.CreationalFactoryMethod:
-                    if (Type == ExampleType.Structural)
+                    if (type == ExampleType.Structural)
                     {
-                        Client.Run();
+                        FactoryMethodClient.RunStructural();
                     }
                     else
                     {
@@ -96,8 +99,6 @@ namespace GoF_Patterns
                 case Patterns.BehavioralMemento:
                     break;
                 case Patterns.BehavioralVisitor:
-                    break;
-                default:
                     break;
             }
 

@@ -1,10 +1,11 @@
 ﻿using System;
+using GoF_Patterns.FactoryMethod.Structural;
 
-namespace GoF_Patterns.FactoryMethod.Structural
+namespace GoF_Patterns.FactoryMethod
 {
-    public static class Client
+    public static class FactoryMethodClient
     {
-        public static void Run()
+        public static void RunStructural()
         {
             var creators = new Creator[]
             {
